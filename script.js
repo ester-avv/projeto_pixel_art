@@ -12,3 +12,7 @@ function colorThePallete() {
   blueColor.style.backgroundColor = 'blue';
 }
 window.onload = colorThePallete;
+
+function clearBoard(){
+  
+}
