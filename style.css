@@ -28,19 +28,17 @@ body{
 }
 
 #pixel-board {
-  height: 50%;
+  height: 40%;
   display: flex;
   text-align: center;
-  margin-bottom: 50px;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 
-.pixels {
-  display: flex;
+.pixel {
   border: 1px solid black;
   width: 50px;
-  height: 50%;
+  height: 50px;
   text-align: center;
+  background-color: white;
 }
