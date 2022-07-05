@@ -1,9 +1,13 @@
+body{
+  background-color: rgb(206, 255, 196);
+}
 #title {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 55px;
-  background-color: blanchedalmond;
-  color: blueviolet;
+  background-color: rgb(220, 255, 208);
+  color: rgb(15, 88, 136);
+  padding: 70px;
 }
 
 #color-palette {
@@ -13,7 +17,6 @@
   margin-bottom: 50px;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 
 .color {
@@ -22,4 +25,22 @@
   height: 50px;
   text-align: center;
   background-color: rgb(252, 240, 240);
+}
+
+#pixel-board {
+  height: 50%;
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.pixels {
+  display: flex;
+  border: 1px solid black;
+  width: 50px;
+  height: 50%;
+  text-align: center;
 }
