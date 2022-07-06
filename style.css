@@ -1,9 +1,16 @@
-body{
+:root {
+  --texto: 'Montserrat';
+}
+
+body {
   background-color: rgb(206, 255, 196);
 }
+
 #title {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--texto), sans-serif;
+  text-align: center;
+  font-family: 'Montserrat-classic', sans-serif;
   font-size: 55px;
   background-color: rgb(220, 255, 208);
   color: rgb(15, 88, 136);

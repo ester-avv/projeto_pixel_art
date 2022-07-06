@@ -11,8 +11,12 @@ function colorThePallete() {
   const blueColor = document.getElementsByClassName('color')[3];
   blueColor.style.backgroundColor = 'blue';
 }
-window.onload = colorThePallete;
 
-function clearBoard(){
-  
+function addClass (){
+  let selectedColor = document.getElementsByClassName('color')[0];
+  selectedColor.classList.add('selected');
 }
+
+addClass ();
+
+window.onload = colorThePallete();
