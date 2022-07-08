@@ -34,10 +34,10 @@ for (let index = 0; index < colorArray.length; index += 1) {
   colorArray[index].addEventListener('click', changeSelected)
 }
 
-function colorPixel (event){
-    let pick = document.getElementsByClassName('selected')[0];
-    let picked = window.getComputedStyle(pick).backgroundColor;
-    event.target.style.backgroundColor = picked;
+function colorPixel(event) {
+  let pick = document.getElementsByClassName('selected')[0];
+  let picked = window.getComputedStyle(pick).backgroundColor;
+  event.target.style.backgroundColor = picked;
 
 }
 
@@ -45,12 +45,18 @@ let pixelArray = document.getElementsByClassName('pixel');
 for (let index = 0; index < pixelArray.length; index += 1) {
   pixelArray[index].addEventListener('click', colorPixel)
 }
+const button = document.getElementById('clear-button');
 
+function clearAll(event) {
+  for (let index = 0; index < pixelArray.length; index += 1) {
+    pixelArray[index].style.backgroundColor = 'white';
+  }
+  return pixelArray;
+}
 
+//button.addEventListener('click', clearAll);
 
-
-
-window.onload = function () {
+window.onload = function all() {
   colorThePallete();
   addClass();
 }
