@@ -59,3 +59,11 @@ body {
   padding: 1em;
   
 }
+
+#board-size {
+  padding: 2px;
+  margin-bottom: 15px;
+  justify-content: center;
+  margin-left: 35%;
+
+}

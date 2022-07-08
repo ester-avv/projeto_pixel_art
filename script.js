@@ -35,26 +35,34 @@ for (let index = 0; index < colorArray.length; index += 1) {
 }
 
 function colorPixel(event) {
-  let pick = document.getElementsByClassName('selected')[0];
-  let picked = window.getComputedStyle(pick).backgroundColor;
-  event.target.style.backgroundColor = picked;
-
+  let activeColor = document.getElementsByClassName('selected')[0];
+  let pickedColor = window.getComputedStyle(activeColor).backgroundColor;
+  event.target.style.backgroundColor = pickedColor;
+  return pickedColor;
 }
 
 let pixelArray = document.getElementsByClassName('pixel');
 for (let index = 0; index < pixelArray.length; index += 1) {
   pixelArray[index].addEventListener('click', colorPixel)
 }
-const button = document.getElementById('clear-button');
 
 function clearAll(event) {
-  for (let index = 0; index < pixelArray.length; index += 1) {
-    pixelArray[index].style.backgroundColor = 'white';
+  for (let i=0; i<pixelArray.length; i+=1){
+    pixelArray[i].style.backgroundColor = 'white';
   }
-  return pixelArray;
+ 
 }
 
-//button.addEventListener('click', clearAll);
+let button = document.getElementById('clear-board');
+
+console.log(button);
+button.addEventListener('click', clearAll);
+
+function numberOfPixels (event){
+  
+
+}
+
 
 window.onload = function all() {
   colorThePallete();
