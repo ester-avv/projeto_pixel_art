@@ -34,23 +34,11 @@ for (let index = 0; index < colorArray.length; index += 1) {
   colorArray[index].addEventListener('click', changeSelected)
 }
 
-/* let qualCor = document.querySelector('.selected');
-console.log(qualCor); */
-
-function colorPixelBlack (event){
-    let pick = document.getElementsByClassName('selected')[0];
-    let cssObj = window.getComputedStyle(pick);
-    let bgColor= cssObj.getPropertyValue('background-color');  
-    return bgColor;
-}
-
-
 function colorPixel (event){
-  if (event.target.classList.contains('pixel')){
     let pick = document.getElementsByClassName('selected')[0];
-    let picked = window.getComputedStyle(pick).getPropertyValue('backgroundColor');
+    let picked = window.getComputedStyle(pick).backgroundColor;
     event.target.style.backgroundColor = picked;
-  }
+
 }
 
 let pixelArray = document.getElementsByClassName('pixel');
@@ -60,8 +48,9 @@ for (let index = 0; index < pixelArray.length; index += 1) {
 
 
 
+
+
 window.onload = function () {
-  colorPixelBlack();
   colorThePallete();
   addClass();
 }

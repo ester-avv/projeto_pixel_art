@@ -49,3 +49,13 @@ body {
   text-align: center;
   background-color: white;
 }
+
+#clear-board {
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(208, 127, 255);
+  margin-left: 46%;
+  padding: 1em;
+  
+}
