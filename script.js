@@ -12,11 +12,39 @@ function colorThePallete() {
   blueColor.style.backgroundColor = 'blue';
 }
 
-function addClass (){
-  let selectedColor = document.getElementsByClassName('color')[0];
-  selectedColor.classList.add('selected');
+function addClass() {
+  let addSelectedClass = document.getElementsByClassName('color')[0];
+  addSelectedClass.classList.add('selected');
+}
+addClass();
+
+function changeSelected (event) {
+  let firstSelected = document.getElementsByClassName('selected')[0];
+  firstSelected.classList.remove('selected');
+
+  event.target.classList.add('selected');
 }
 
-addClass ();
+let colorArray = document.querySelectorAll('.color');
+console.log(colorArray);
 
-window.onload = colorThePallete();
+for (let index = 0; index < colorArray.length; index += 1) {
+  colorArray[index].addEventListener('click', changeSelected)
+  }
+
+/* function changeColor() {
+
+  let firstSelected = document.getElementsByClassName('selected')[0];
+  firstSelected.classList.remove('selected');
+
+ 
+
+} */
+
+/* changeColor(); */
+
+
+window.onload = function () {
+  colorThePallete();
+  addClass();
+}
