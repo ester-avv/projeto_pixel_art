@@ -47,10 +47,10 @@ for (let index = 0; index < pixelArray.length; index += 1) {
 }
 
 function clearAll(event) {
-  for (let i=0; i<pixelArray.length; i+=1){
+  for (let i = 0; i < pixelArray.length; i += 1) {
     pixelArray[i].style.backgroundColor = 'white';
   }
- 
+
 }
 
 let button = document.getElementById('clear-board');
@@ -58,11 +58,23 @@ let button = document.getElementById('clear-board');
 console.log(button);
 button.addEventListener('click', clearAll);
 
-function numberOfPixels (event){
-  
+function numberOfPixels(event) {
+  let addPixelsNumber = document.getElementsByClassName('pixel').length;
+  addPixelsNumber = parseInt(addPixelsNumber);
+  chosenNumber = document.getElementById('board-size').value;
 
+  if (chosenNumber == 0) {
+    alert("Board inválido!");
+  }
+  else {
+    chosenNumber = chosenNumber * chosenNumber;
+    addPixelsNumber = chosenNumber;
+    pixelArray(addPixelsNumber).fill(addPixelsNumber.classList.addClass('pixel'));
+  }
 }
 
+vqvButton = document.getElementById('generate-board');
+vqvButton.addEventListener('click', numberOfPixels);
 
 window.onload = function all() {
   colorThePallete();

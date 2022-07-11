@@ -54,16 +54,20 @@ body {
   margin-bottom: 40px;
   justify-content: center;
   align-items: center;
-  background-color: rgb(208, 127, 255);
+  background-color: rgb(242, 219, 255);
   margin-left: 46%;
   padding: 1em;
   
 }
 
 #board-size {
-  padding: 2px;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   justify-content: center;
-  margin-left: 35%;
+  align-items: center;
+  background-color: rgb(242, 219, 255);
+  margin-left: 46%;
+  padding: 1em;
 
 }
+
+
